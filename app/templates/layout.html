@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/favicon.ico') }}" />
-    <title>{page_title}</title>
+    <title>{{page_title}}</title>
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel=stylesheet>
     <link href="{{ url_for('static', filename='css/animate.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/themify-icons.css') }}" rel="stylesheet">
@@ -30,7 +30,7 @@
     <!-- Preloader -->
     <div id="fredia-page-loading" class="fredia-pageloading">
         <div class="fredia-pageloading-inner">
-            <a class="fredia-pageloading" href="{{ url_for('index') }}"> <img src="{{ url_for('static', filename='images/logo/logo-dark.png') }}" alt=" "> </a>
+            <a class="fredia-pageloading" href="{{ url_for('main_pages.index') }}"> <img src="{{ url_for('static', filename='images/logo/logo-dark.png') }}" alt=" "> </a>
         </div>
     </div>
     <!-- Header -->
@@ -43,17 +43,17 @@
                             <div class="col-md-12">
                                 <nav class="navbar navbar-expand-md navbar-light">
                                     <!-- Logo -->
-                                    <a class="navbar-brand" href="{{ url_for ('index') }}"> <img src="{{ url_for('static', filename='images/logo/logo-light.png') }}" alt=""> </a>
+                                    <a class="navbar-brand" href="{{ url_for ('main_pages.index') }}"> <img src="{{ url_for('static', filename='images/logo/logo-light.png') }}" alt=""> </a>
                                     <!-- Menu -->
                                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav ml-auto py-4 py-md-0">
-                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active"> <a class="nav-link" href="{{ url_for ('index') }}">Главная</a></li>
-                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('about') }}">Обо мне</a></li>
-                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('portfolio') }}">Портфолио</a></li>
-                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('price_page') }}">Цены</a></li>
-                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('blog_one') }}">Блог</a></li>
-                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('contact_page') }}">Контакты</a> </li>
+                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4 active"> <a class="nav-link" href="{{ url_for ('main_pages.index') }}">Главная</a></li>
+                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('main_pages.about') }}">Обо мне</a></li>
+                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('main_pages.portfolio') }}">Портфолио</a></li>
+                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('main_pages.price_page') }}">Цены</a></li>
+                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="#">Блог</a></li>
+                                            <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4"> <a class="nav-link" href="{{ url_for ('main_pages.contact_page') }}">Контакты</a> </li>
                                         </ul>
                                     </div>
                                 </nav>
@@ -76,18 +76,17 @@
                 <!-- Start footer bottom -->
                 <div class="offset-md-3 col-md-6 offset-md-3">
                 <!-- Footer logo -->
-                    <a href="#">
-                    <h3 class="site-title">Елена Долгорукая</h3></a>
+                    <a href="#"><h3 class="site-title">Елена Долгорукая</h3></a>
                     <h4 class="site-title-tagline">визажист&стилист</h4>
                 <!-- Start quick icons -->
                     <div class="quick-links">
                         <ul class="links">
-                            <li><a href="{{ url_for ('index') }}">Главная</a>&#124;</li>
-                            <li><a href="{{ url_for ('about') }}">Обо мне</a>&#124;</li>
-                            <li><a href="{{ url_for ('portfolio') }}">Портфолио</a>&#124;</li>
-                            <li><a href="{{ url_for ('price_page') }}">Цены</a>&#124;</li>
-                            <li><a href="{{ url_for ('blog_one') }}">Блог</a>&#124;</li>
-                            <li><a href="{{ url_for ('contact_page') }}">Контакты</a></li>
+                            <li><a href="{{ url_for ('main_pages.index') }}">Главная</a>&#124;</li>
+                            <li><a href="{{ url_for ('main_pages.about') }}">Обо мне</a>&#124;</li>
+                            <li><a href="{{ url_for ('main_pages.portfolio') }}">Портфолио</a>&#124;</li>
+                            <li><a href="{{ url_for ('main_pages.price_page') }}">Цены</a>&#124;</li>
+                            <li><a href="#">Блог</a>&#124;</li>
+                            <li><a href="{{ url_for ('main_pages.contact_page') }}">Контакты</a></li>
                         </ul>
                     </div>
                 <!-- End quick icons -->
@@ -102,7 +101,7 @@
                     </div>
                 <!-- End social icons -->
                     <div class="btn-cont">
-                        <a href="{{ url_for ('contact_page') }}"><span>Заказать онлайн!</span></a>
+                        <a href="{{ url_for ('main_pages.contact_page') }}"><span>Заказать онлайн!</span></a>
                     </div>
                 </div>
                 <!-- End footer bottom -->
