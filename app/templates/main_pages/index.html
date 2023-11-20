@@ -130,5 +130,88 @@
             </div>
         </div>
     </div>
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="background bg-img bg-fixed bg-img-position-center section-padding" data-background="{{ url_for('static', filename='images/slider/05.jpg') }}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h2>стоимость услуг</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Дневной макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">40-45 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Вечерний макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">50-60 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Лифтинг - макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">от 50 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Свадебный макияж</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">от 100 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Для фотосессии</h4>
+                                <div class="pricing-divider"></div>
+                                <span class="price">35-45 у.е.</span>
+                            </div>
+                            <p class="pricing-desc"><b>Продолжительность: 1,5-2 часа, Выезд на дом или студия.</b></p>
+                        </div>
+                    </div>
+                    <div class="col-md-5 offset-md-2">
+                        <div class="pricing-panel">
+                            <div class="pricing-content">
+                                <h4 class="pricing-heading">Обучение</h4>
+                            </div>
+                            <p class="pricing-desc"><b>Стоимость обговаривается индивидуально.</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-right animate-box" data-animate-effect="fadeInUp">
+                    <p><a href="{{ url_for ('main_pages.price_page') }}" class="underline-text">подробно про стоимость</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 {% endblock content %}
