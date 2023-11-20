@@ -1,5 +1,134 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<p>Main pages</p>
+    <!-- Slider -->
+     <div class="slider">
+        <div class="swiper-container parallax-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/05.jpg') }}">
+                        <div class="container">
+                            <div class="row justify-content-left">
+                                <div class="col-md-7">
+                                    <div class="caption left">
+                                        <h1>Елена Долгорукая</h1>
+                                        <h2>визажист-стилист</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/01.jpg') }}"></div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/03.jpg') }}"></div>
+                </div>
+                <div class="swiper-slide text-center">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/02.jpg') }}">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8">
+                                    <div class="caption center">
+                                        <h1>Елена Долгорукая</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bg-img valign" data-background="{{ url_for('static', filename='images/slider/04.jpg') }}"></div>
+                </div>
+            </div>
+            <!-- slider setting -->
+            <div class="setone setwo">
+                <div class="swiper-button-next swiper-nav-ctrl next-ctrl cursor-pointer"> <i class="ti-angle-right"></i> </div>
+                <div class="swiper-button-prev swiper-nav-ctrl prev-ctrl cursor-pointer"> <i class="ti-angle-left"></i> </div>
+            </div>
+            <div class="swiper-pagination top botm"></div>
+            <!-- social media -->
+            <div class="social-icon">
+                <a href="https://www.instagram.com/dolgorukaya_makeup"><i class="fab fa-instagram"></i></a>
+                <a href="https://t.me/Elena_makeup_bot" rel="nofollow"><i class="fab fa-telegram"></i></a>
+                <a href="viber://chat?number=%2B375257085014"><i class="fab fa-viber"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- General Services -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <span>что я умею</span>
+                    <h1>услуги визажа</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"> <span class="line-one"></span> </div>
+                        <div class="col-md-7 mb-30 animate-box" data-animate-effect="fadeInUp">
+                            <p><b>Меня зовут Елена, я профессиональный визажист-стилист. Собираетесь ли вы на свадьбу, вечеринку
+                            или фотосессию, или предпочитаете более простой естественный вид, я создам этот образ для Вас.</b></p>
+                            <p>За годы работы в бьюти сфере разработала свой собственный уникальный стиль. Комбинирую последние тренды
+                            макияжа и превращаю их в естественные и захватывающие образы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row services">
+                <div class="col-md-4 mb-15">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s1.jpg') }}" alt=""> </div>
+                        <div class="con">
+                            <h5><a href="{{ url_for ('main_pages.portfolio') }}">повседневный</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-15">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s2.jpg') }}" alt=""> </div>
+                        <div class="con">
+                            <h5><a href="{{ url_for ('main_pages.portfolio') }}">вечерний</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-15">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s3.jpg') }}" alt=""> </div>
+                        <div class="con">
+                            <h5><a href="{{ url_for ('main_pages.portfolio') }}">лифтинг-макияж</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s4.jpg') }}" alt=""> </div>
+                        <div class="con">
+                            <h5><a href="{{ url_for ('main_pages.portfolio') }}">свадебный</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s5.jpg') }}" alt=""> </div>
+                        <div class="con">
+                            <h5><a href="{{ url_for ('main_pages.portfolio') }}">для фотосессии</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item animate-box" data-animate-effect="fadeInUp">
+                        <div class="position-re o-hidden"> <img src="{{ url_for('static', filename='images/services/s6.jpg') }}" alt=""> </div>
+                        <div class="con">
+                            <h5><a href="{{ url_for ('main_pages.portfolio') }}">креативный</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock content %}
