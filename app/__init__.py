@@ -24,4 +24,7 @@ def create_app(*config_cls) -> Flask:
     from app.main_pages import bp as bp_main_pages
     flask_app.register_blueprint(bp_main_pages)
 
+    from app.blog import bp as bp_blog
+    flask_app.register_blueprint(bp_blog)
+
     return flask_app
