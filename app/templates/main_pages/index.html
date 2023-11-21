@@ -71,9 +71,11 @@
                         <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"> <span class="line-one"></span> </div>
                         <div class="col-md-7 mb-30 animate-box" data-animate-effect="fadeInUp">
                             <p><b>Меня зовут Елена, я профессиональный визажист-стилист. Собираетесь ли вы на свадьбу, вечеринку
-                            или фотосессию, или предпочитаете более простой естественный вид, я создам этот образ для Вас.</b></p>
-                            <p>За годы работы в бьюти сфере разработала свой собственный уникальный стиль. Комбинирую последние тренды
-                            макияжа и превращаю их в естественные и захватывающие образы.</p>
+                            или фотосессию, или предпочитаете более простой естественный вид, я создам этот образ для Вас.</b>
+                            </p>
+                            <p>За годы работы в бьюти сфере разработала свой собственный уникальный стиль. Комбинирую
+                                последние тренды макияжа и превращаю их в естественные и захватывающие образы.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -202,8 +204,8 @@
                     </div>
                 </div>
             </div>
-            </div>
-        </section>
+        </div>
+    </section>
         <div class="section-padding">
             <div class="container">
                 <div class="row">
@@ -213,5 +215,73 @@
                 </div>
             </div>
         </div>
-
+    <!-- Testimonials -->
+    <div class="testimonials section-padding bg-img bg-fixed" data-background="{{ url_for('static', filename='images/slider/02.jpg') }}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center"> <span>пара слов ...</span>
+                    <h1>отзывы клиентов</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="owl-carousel owl-theme col-md-12">
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png') }}" alt=""></span>
+                        <p>"Безусловно, я рекомендую Елену в качестве визажиста для любого проекта. Профессионализм и
+                            неконфликтность делают ее незаменимым членом команды. Работает очень чисто, что существенно
+                            сокращает время на ретушь фотографий."
+                        </p>
+                        <div class="info">
+                            <div class="author-img"><img src="{{ url_for('static', filename='images/testimonials/1.png') }}" alt=""></div>
+                            <div class="cont">
+                                <h6>Екатерина Крусь</h6> <span>фотограф</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png') }}" alt=""></span>
+                        <p>"Огромное спасибо мастеру Елене, образ получился сногсшибательным. Нужен был вечерний макияж
+                            для корпоратива. В работе легкая, не навязывает ничего, внимательная, всегда спрашивала,
+                            что нравится, что не нравится. Макияж был очень стойким, мне кажется, если не смыла бы, то
+                            еще и следующий день проходила). Теперь буду постоянным клиентом."
+                        </p>
+                        <div class="info">
+                            <div class="author-img"> <img src="{{ url_for('static', filename='images/testimonials/2.png') }}" alt=""> </div>
+                            <div class="cont">
+                                <h6>Ирина</h6> <span>администратор</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png') }}" alt=""></span>
+                        <p>"Спасибо большое Елене за свадебный макияж! Он был очень комфортный, нежный, подчеркивал
+                            достоинства и скрыл все недостатки кожи. А главное, смотрелся очень естественно. Если
+                            будет нужен еще макияж для какого-либо другого события, обязательно к ней обращусь. И,
+                            конечно, буду рекомендовать её друзьям и знакомым."
+                        </p>
+                        <div class="info">
+                            <div class="author-img"> <img src="{{ url_for('static', filename='images/testimonials/3.png') }}" alt=""> </div>
+                            <div class="cont">
+                                <h6>Ольга Ситник</h6> <span>флорист</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-box">
+                        <span class="quote"><img src="{{ url_for('static', filename='images/testimonials/quot.png') }}" alt=""></span>
+                        <p>"Елена отличный мастер и прекрасный человек! Учла мои пожелания и выполнила макияж, который
+                            превзошёл все ожидания. Так красиво глаза мне ещё никто не красил. Отдельно нужно сказать
+                            про то, как были накрашены губы. Просто что-то невероятное! Хорошая и качественная косметика.
+                            Очень рада знакомству с Еленой. Надеюсь, что мы увидимся ещё не один раз. Высший балл!!!"
+                        </p>
+                        <div class="info">
+                            <div class="author-img"> <img src="{{ url_for('static', filename='images/testimonials/4.png') }}" alt=""> </div>
+                            <div class="cont">
+                                <h6>Юлия Новак</h6> <span>дизайнер одежды</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock content %}
