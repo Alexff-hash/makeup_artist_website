@@ -12,7 +12,7 @@ def about():
 
 @bp.route('/portfolio')
 def portfolio():
-    pass
+    return render_template('main_pages/portfolio.html', page_title='Портфолио')
 
 @bp.route('/price_page')
 def price_page():
