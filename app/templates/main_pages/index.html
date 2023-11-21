@@ -284,4 +284,51 @@
             </div>
         </div>
     </div>
+    <!-- Blog -->
+    <section class="blog-grid section-padding bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30 animate-box" data-animate-effect="fadeInUp">
+                    <span>мой блог</span>
+                    <h1>публикации в журналах</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 owl-carousel owl-theme">
+                    <div class="item list animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"><img src="{{ url_for('static', filename='images/blog/1.jpg') }}" alt=""></div>
+                        <div class="cont">
+                            <h6>
+                                <a href="{{ url_for ('blog.blog_magazines') }}">Публикация в VIGOUR magazine,<br>Канада</a>
+                            </h6>
+                            <a href="{{ url_for ('blog.blog_magazines') }}" class="underline-text">узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="item list animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"> <img src="{{ url_for('static', filename='images/blog/2.jpg') }}" alt=""> </div>
+                        <div class="cont">
+                            <h6>
+                                <a href="{{ url_for ('blog.blog_magazines') }}">Публикация в THE MERMAID magazine,<br>Австралия</a>
+                            </h6>
+                            <a href="{{ url_for ('blog.blog_magazines') }}" class="underline-text">узнать больше</a>
+                        </div>
+                    </div>
+                    <div class="item list animate-box" data-animate-effect="fadeInUp">
+                        <div class="img"> <img src="{{ url_for('static', filename='images/blog/3.jpg') }}" alt=""> </div>
+                        <div class="cont">
+                            <h6>
+                                <a href="{{ url_for ('blog.blog_magazines') }}">Публикация в журнале MARIKA,<br>Италия</a>
+                            </h6>
+                            <a href="{{ url_for ('blog.blog_magazines') }}" class="underline-text">узнать больше</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-right animate-box" data-animate-effect="fadeInUp">
+                    <p><a href="{{ url_for ('blog.blog_one') }}" class="underline-text">блог</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock content %}
