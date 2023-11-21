@@ -4,10 +4,11 @@ from app.main_pages import bp
 
 @bp.route('/')
 def index():
-    return render_template('main_pages/index.html', page_title='Dolgorukaya makeup')
+    return render_template('main_pages/index.html',
+                           page_title='Визажист-стилист Елена Долгорукая')
 @bp.route('/about')
 def about():
-    pass
+    return render_template('main_pages/about.html', page_title='Обо мне')
 
 @bp.route('/portfolio')
 def portfolio():
