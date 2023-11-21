@@ -1,6 +1,7 @@
-from flask import render_template
+from flask import render_template, request, redirect, url_for, jsonify
 
 from app.main_pages import bp
+from app.main_pages.forms import BookingForm
 
 @bp.route('/')
 def index():
@@ -18,6 +19,11 @@ def portfolio():
 def price_page():
     return render_template('main_pages/price_page.html', price_page='Цены на услуги')
 
-@bp.route('/contact')
+@bp.route('/contact', methods=['GET', 'POST'])
 def contact_page():
-    pass
+    form = BookingForm()
+    if request.method == 'POST' and form.validate_on_submit():
+        return 'Благодарим за заявку!!!'
+    elif request.method == 'POST' and not form.validate_on_submit():
+        return jsonify(form.errors), 400
+    return render_template('main_pages/contact.html', form=form, page_title='Контакты')
