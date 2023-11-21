@@ -16,7 +16,7 @@ def portfolio():
 
 @bp.route('/price_page')
 def price_page():
-    pass
+    return render_template('main_pages/price_page.html', price_page='Цены на услуги')
 
 @bp.route('/contact')
 def contact_page():
