@@ -92,4 +92,61 @@
             </div>
         </div>
     </div>
+
+        <!-- JS for Booking Form -->
+        <script>
+            const form = document.getElementById('form');
+            const successMessage = document.getElementById('success-message');
+            const date = document.getElementById('date');
+            const time = document.getElementById('time');
+            const message = document.getElementById('message');
+            const fields = {
+                csrf_token: {
+                    input: document.getElementById('csrf_token'),
+                    error: document.getElementById('csrf_token-error')
+                },
+                name: {
+                    input: document.getElementById('name'),
+                    error: document.getElementById('name-error')
+                },
+                phone: {
+                    input: document.getElementById('tel'),
+                    error: document.getElementById('phone-error')
+                },
+                services: {
+                    input: document.getElementById('services'),
+                    error: document.getElementById('services-error')
+                }
+            }
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        csrf_token: fields.csrf_token.input.value,
+                        name: fields.name.input.value,
+                        phone: fields.phone.input.value,
+                        services: fields.services.input.value,
+                        date: date.value,
+                        time: time.value,
+                        message: message.value
+                    })
+                });
+                if (response.ok) {
+                    successMessage.innerHTML = await response.text();
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                } else {
+                    const errors = await response.json();
+                    Object.keys(errors).forEach((key) => {
+                        fields[key].input.classList.add('is-invalid');
+                        fields[key].error.innerHTML = errors[key][0];
+                    });
+                }
+            });
+        </script>
     {% endblock content %}
