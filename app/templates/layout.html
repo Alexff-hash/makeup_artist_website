@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +15,10 @@
     <link href="{{ url_for('static', filename='modules/magnific-popup/magnific-popup.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='modules/swiper/swiper.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/plugins/jquery-3.5.1.min.js') }}"></script>
+        {% block input_mask %}
+        {% endblock input_mask %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144098545-1"></script>
     <script>
@@ -25,7 +28,6 @@
       gtag('config', 'UA-144098545-1');
     </script>
 </head>
-
 <body>
     <!-- Preloader -->
     <div id="fredia-page-loading" class="fredia-pageloading">
@@ -73,12 +75,12 @@
     <section class="footer">
         <div class="container">
             <div class="row">
-                <!-- Start footer bottom -->
+                <!-- Footer bottom -->
                 <div class="offset-md-3 col-md-6 offset-md-3">
-                <!-- Footer logo -->
+                    <!-- Footer logo -->
                     <a href="#"><h3 class="site-title">Елена Долгорукая</h3></a>
                     <h4 class="site-title-tagline">визажист&стилист</h4>
-                <!-- Start quick icons -->
+                    <!-- Quick icons -->
                     <div class="quick-links">
                         <ul class="links">
                             <li><a href="{{ url_for ('main_pages.index') }}">Главная</a>&#124;</li>
@@ -89,8 +91,8 @@
                             <li><a href="{{ url_for ('main_pages.contact_page') }}">Контакты</a></li>
                         </ul>
                     </div>
-                <!-- End quick icons -->
-                <!-- Start social icons -->
+                    <!-- End quick icons -->
+                    <!-- Start social icons -->
                     <div class="social-links">
                         <ul>
                             <li><a href="tel:+375257085014"><i class="fa-sharp fa-solid fa-phone"></i></a></li>
@@ -99,7 +101,7 @@
                             <li><a href="viber://chat?number=%2B375257085014"><i class="fab fa-viber"></i></a></li>
                         </ul>
                     </div>
-                <!-- End social icons -->
+                    <!-- End social icons -->
                     <div class="btn-cont">
                         <a href="{{ url_for ('main_pages.contact_page') }}"><span>Заказать онлайн!</span></a>
                     </div>
@@ -108,7 +110,7 @@
             </div>
         </div>
     </section>
-                <!-- Copyright -->
+    <!-- Copyright -->
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -123,8 +125,9 @@
     <!-- End footer  -->
     <!-- toTop -->
     <a href="index.html#" class="totop">TOP</a>
-    <!-- jQuery -->
-    <script src="{{ url_for('static', filename='js/plugins/jquery-3.5.1.min.js') }}"></script>
+    {% block java_scripts %}
+    {% endblock java_scripts %}
+    <!-- Scripts -->
     <script src="{{ url_for('static', filename='js/plugins/bootstrap.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plugins/imagesloaded.pkgd.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/plugins/jquery.isotope.v3.0.2.js') }}"></script>

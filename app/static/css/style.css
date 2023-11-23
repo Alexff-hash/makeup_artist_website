@@ -233,13 +233,6 @@ input[type="checkbox"] {
     display: inline;
 }
 
-.alert-success {
-    font-weight: 300;
-    font-size: 25px;
-    font-family: "Open Sans", sans-serif;
-    color: #e52e71;
-    margin-bottom: 15px;
-}
 /* Placeholder */
 ::-webkit-input-placeholder {
     color: #777;

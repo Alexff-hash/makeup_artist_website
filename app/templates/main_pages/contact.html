@@ -1,5 +1,10 @@
     {% extends 'layout.html' %}
 
+    <!-- Input Mask for phone number -->
+    {% block input_mask %}
+    <script src="{{ url_for('static', filename='js/plugins/jquery.inputmask.min.js') }}"></script>
+    {% endblock input_mask %}
+
     {% block content %}
     <!-- Banner Title -->
     <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/04.jpg') }}">
@@ -93,6 +98,13 @@
         </div>
     </div>
 
+        {% block java_scripts %}
+        <!-- JS for Phone Mask Input -->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#tel").inputmask("+375(99)-999-99-99");
+            });
+        </script>
         <!-- JS for Booking Form -->
         <script>
             const form = document.getElementById('form');
@@ -149,4 +161,6 @@
                 }
             });
         </script>
+        {% endblock java_scripts %}
+
     {% endblock content %}
