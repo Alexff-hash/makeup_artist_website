@@ -1,3 +1,4 @@
+"""Blog routes."""
 from flask import render_template
 
 from app.blog import bp
@@ -5,7 +6,7 @@ from app.blog import bp
 
 @bp.route('/blog-one')
 def blog_one():
-    pass
+    return render_template('blog/blog_one.html')
 @bp.route('/blog-two')
 def blog_two():
     pass
