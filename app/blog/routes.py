@@ -22,9 +22,10 @@ def blog_everyday():
 def blog_evening():
     return render_template('blog/blog_evening.html')
 
+
 @bp.route('/lifting-makeup')
 def blog_lifting():
-    pass
+    return render_template('blog/blog_lifting.html')
 
 @bp.route('/bridal-makeup')
 def blog_bridal():
