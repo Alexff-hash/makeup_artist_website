@@ -7,9 +7,13 @@ from app.blog import bp
 @bp.route('/blog-one')
 def blog_one():
     return render_template('blog/blog_one.html')
+
+
 @bp.route('/blog-two')
 def blog_two():
-    pass
+    return render_template('blog/blog_two.html')
+
+
 @bp.route('/everyday-makeup')
 def blog_everyday():
     pass
