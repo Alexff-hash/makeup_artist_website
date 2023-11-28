@@ -1,3 +1,4 @@
+"""Booking forms."""
 from datetime import datetime
 
 from flask_wtf import FlaskForm

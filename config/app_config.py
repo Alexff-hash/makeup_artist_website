@@ -1,10 +1,25 @@
+"""Application configuration."""
 import os
+
+from dotenv import load_dotenv
+
+basedir = os.path.abspath(os.path.dirname(__file__))
+load_dotenv(os.path.join(basedir, '.env'))
 
 
 class LocalLevelConfig:
     ENV = 'development'
-    DEBUG = True
-    SECRET_KEY = os.getenv('SECRET_KEY', '85c145a16bd6f6e1f3e104ca78c6a10')
+    DEBUG = False
+    SECRET_KEY = os.getenv('SECRET_KEY', 'very_secret_key')
+    LOG_TO_STDOUT = os.getenv('LOG_TO_STDOUT')
+
+    SMTP_SERVER_NAME = os.getenv('SMTP_SERVER_NAME', 'smtp.gmail.com')
+    SMTP_PORT = int(os.getenv('SMTP_PORT', 587))
+    SMTP_USER_PASSWORD = os.getenv('SMTP_USER_PASSWORD')
+    SMTP_USER_LOGIN = os.getenv('SMTP_USER_LOGIN')
+    MAIL_SENDER = os.getenv('MAIL_SENDER')
+    MAIL_RECIPIENT = os.getenv('MAIL_RECIPIENT')
+    MAIL_SUBJECT = os.getenv('MAIL_SUBJECT', 'Новый клиент!')
 
 
 class ProductionLevelConfig:

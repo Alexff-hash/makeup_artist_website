@@ -22,3 +22,7 @@ ENV/
 .idea/**/gradle.xml
 .idea/**/libraries
 *.iws /out/
+
+# Staff
+project_notes.txt/
+*.log
