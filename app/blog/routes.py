@@ -20,7 +20,7 @@ def blog_everyday():
 
 @bp.route('/evening-makeup')
 def blog_evening():
-    pass
+    return render_template('blog/blog_evening.html')
 
 @bp.route('/lifting-makeup')
 def blog_lifting():
