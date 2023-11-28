@@ -32,9 +32,11 @@ def blog_lifting():
 def blog_bridal():
     return render_template('blog/blog_bridal.html')
 
+
 @bp.route('/photoshoot')
 def blog_photoshoot():
-    pass
+    return render_template('blog/blog_photoshoot.html')
+
 
 @bp.route('/publications-journals')
 def blog_magazines():

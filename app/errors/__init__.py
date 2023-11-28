@@ -1,4 +1,4 @@
-"""The errors module."""
+"""The error's module."""
 from flask import Blueprint
 
 bp = Blueprint('errors', __name__)
