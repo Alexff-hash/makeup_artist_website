@@ -2,12 +2,12 @@
 
     <!-- Input Mask for phone number -->
     {% block input_mask %}
-    <script src="{{ url_for('static', filename='js/plugins/jquery.inputmask.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/plugins/jquery.inputmask.min.js')}}"></script>
     {% endblock input_mask %}
 
     {% block content %}
     <!-- Banner Title -->
-    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/04.jpg') }}">
+    <div class="ready banner-padding bg-img bg-fixed valign" data-background="{{ url_for('static', filename='images/slider/04.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row mb-60">
-                        <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"> <span class="line-one"></span> </div>
+                        <div class="col-md-2 animate-box" data-animate-effect="fadeInUp"> <span class="line-one"></span></div>
                         <div class="col-md-4 mb-30 animate-box" data-animate-effect="fadeInUp">
                             <p>Связаться со мной вы можете любым удобным для Вас способом:</p>
                             <ul>
@@ -97,7 +97,6 @@
             </div>
         </div>
     </div>
-
         {% block java_scripts %}
         <!-- JS for Phone Mask Input -->
         <script type="text/javascript">
@@ -133,7 +132,7 @@
 
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
-                const response = await fetch('/contact', {
+                const response = await fetch('{{ url_for("main_pages.contact_page")}}', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -40,4 +40,4 @@ def blog_photoshoot():
 
 @bp.route('/publications-journals')
 def blog_magazines():
-    pass
+    return render_template('blog/blog_magazines.html')
