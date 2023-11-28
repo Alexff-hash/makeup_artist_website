@@ -16,7 +16,7 @@ def blog_two():
 
 @bp.route('/everyday-makeup')
 def blog_everyday():
-    pass
+    return render_template('blog/blog_everyday.html')
 
 @bp.route('/evening-makeup')
 def blog_evening():
