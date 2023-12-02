@@ -7,10 +7,10 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, '.env'))
 
 
-class LocalLevelConfig:
-    ENV = 'development'
-    DEBUG = False
-    SECRET_KEY = os.getenv('SECRET_KEY', 'very_secret_key')
+class Config:
+    """Base configuration."""
+
+    SECRET_KEY = os.getenv('SECRET_KEY', 'very-secret-key')
     LOG_TO_STDOUT = os.getenv('LOG_TO_STDOUT')
 
     SMTP_SERVER_NAME = os.getenv('SMTP_SERVER_NAME', 'smtp.gmail.com')
@@ -22,7 +22,23 @@ class LocalLevelConfig:
     MAIL_SUBJECT = os.getenv('MAIL_SUBJECT', 'Новый клиент!')
 
 
-class ProductionLevelConfig:
+class ProdConfig(Config):
+    """Production configuration."""
+
     ENV = 'production'
     DEBUG = False
-    SECRET_KEY = os.getenv('SECRET_KEY')
+
+
+class DevConfig(Config):
+    """Development configuration."""
+
+    ENV = 'development'
+    DEBUG = True
+
+
+class TestingConfig(Config):
+    """Test configuration."""
+
+    TESTING = True
+    DEBUG = True
+    WTF_CSRF_ENABLED = False #for form validation
