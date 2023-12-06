@@ -15,7 +15,7 @@ def booking_message(form, mail_subject, mail_from, mail_to) -> 'html':
     mail['From'] = mail_from
     mail['To'] = mail_to
     data = form.data
-    data.pop('csrf_token')
+    data.pop('csrf_token', None)
     if data['date'] == datetime.now().date() and data['time'].strftime('%H') == datetime.now().strftime('%H'):
         data['date'] = 'не задано'
         data['time'] = 'не задано'

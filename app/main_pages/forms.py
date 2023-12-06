@@ -1,4 +1,4 @@
-"""Booking forms."""
+"""The booking form module."""
 from datetime import datetime
 
 from flask_wtf import FlaskForm
